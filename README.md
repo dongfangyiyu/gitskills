@@ -1,2 +1,2 @@
 # gitskills
-not ignore fifth
+not ignore fifth sixth
