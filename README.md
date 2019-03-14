@@ -1,1 +1,2 @@
 # gitskills
+not ignore
