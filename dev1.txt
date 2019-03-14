@@ -1,2 +1,0 @@
-add dev1.txt
-ignored second third fourth
