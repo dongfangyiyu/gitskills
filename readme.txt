@@ -1,3 +1,1 @@
-# gitskills
-<<<<<<< HEAD
-Creating a new branch is quick and simple not danger
+gitCommand.txt为本人在学习廖雪峰老师的git教程后做的总结笔记同时参考<a href="https://github.com/dongfangyiyu/learngit-2/blob/master/git_learnmichaelliao_blog.md">别人笔记</a>所得。
