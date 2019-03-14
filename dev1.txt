@@ -1,2 +1,2 @@
 add dev1.txt
-ignored
+ignored second
