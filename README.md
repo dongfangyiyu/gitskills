@@ -1,92 +1,113 @@
 # gitskills
 
-gitÑ§Ï°±Ê¼Ç
-1.git add	Ìí¼Ó±¾µØ¿âÎÄ¼şµ½²Ö¿â£¬Î´Ìá½»×´Ì¬
-	git add -A Ìá½»ËùÓĞ±ä»¯
-	git add -u Ìá½»±»ĞŞ¸Ä£¨modified£©ºÍ±»É¾³ı£¨deleted£©ÎÄ¼ş£¬²»°üÀ¨ĞÂÎÄ¼ş£¨new£©
-	git add . Ìá½»ĞÂÎÄ¼ş£¨new£©ºÍ±»ĞŞ¸Ä£¨modified£©ÎÄ¼ş£¬²»°üÀ¨±»É¾³ı£¨deleted£©ÎÄ¼ş
+gitå­¦ä¹ ç¬”è®°
 
-2.git commit -m Ò»´ÎÌá½»Ìí¼ÓµÄÎÄ¼şÃÇµ½²Ö¿â
+1.git add	æ·»åŠ æœ¬åœ°åº“æ–‡ä»¶åˆ°ä»“åº“ï¼Œæœªæäº¤çŠ¶æ€
 
-3.°æ±¾ĞŞ¸Ä
-	git status ²é¿´²Ö¿â×´Ì¬
-	git diff ÎÄ¼şÃû ²é¿´¶Ô±È
+	git add -A æäº¤æ‰€æœ‰å˜åŒ–
+	git add -u æäº¤è¢«ä¿®æ”¹ï¼ˆmodifiedï¼‰å’Œè¢«åˆ é™¤ï¼ˆdeletedï¼‰æ–‡ä»¶ï¼Œä¸åŒ…æ‹¬æ–°æ–‡ä»¶ï¼ˆnewï¼‰
+	git add . æäº¤æ–°æ–‡ä»¶ï¼ˆnewï¼‰å’Œè¢«ä¿®æ”¹ï¼ˆmodifiedï¼‰æ–‡ä»¶ï¼Œä¸åŒ…æ‹¬è¢«åˆ é™¤ï¼ˆdeletedï¼‰æ–‡ä»¶
 
-4.Ê±¹â´©Ëó
- 4.1 °æ±¾»ØÍË(ÉÏÒ»¸ö°æ±¾) git reset --hard HEAD^
-     git reset --hard commit_id ¿ÉÒÔ»Øµ½ÈÎÒâ°æ±¾£¨¿ìÕÕ£©
-     git log£¬git reflog ¿É²é¿´commit_idÌá½»ÈÕÖ¾
-     git log --graph --pretty=oneline --abbrev-commit ²é¿´·ÖÖ§µÄÌá½»Çé¿ö£¨¼òÂÔ°æ£©
- 4.2 ¹ÜÀíĞŞ¸Ä
-     cat ÎÄ¼şÃû ²é¿´ÎÄ¼şÄÚÈİ
-     git diff ¹¤×÷ÇøÓëstage±È½Ï
-     git diff --cached stageÇøºÍ²Ö¿â·ÖÖ§±È½Ï
-     git diff HEAD -- ÎÄ¼şÃû ¹¤×÷ÇøºÍ²Ö¿â·ÖÖ§±È½Ï
- 4.3 ³·ÏúĞŞ¸Ä
-     git checkout -- file ¶ªÆú¹¤×÷ÇøĞŞ¸ÄÄÚÈİ
-     ÏÈ git reset HEAD <file>,¶ªµôÔİ´æÇøĞŞ¸ÄµÄÄÚÈİ£¬ÔÙgit checkout -- file ¶ªµô¹¤×÷ÇøĞŞ¸ÄÄÚÈİ
-     Ìá½»µ½°æ±¾¿âÎ´Ìá½»µ½Ô¶³Ì¿âÏë³·»Ø²Î¿¼4.1
- 4.4 É¾³ıÎÄ¼şÓë»Ö¸´ 
-     4.4.1 rm file É¾³ı¹¤×÷ÇøµÄÎÄ¼ş git rm file£¨É¾³ıstageÖĞÄÚÈİ£©»òÕßgit add file£¨½«É¾³ıµÄĞĞÎªÌí¼Óµ½stageÖĞ£©£¬
-	   È»ºógit commit
-     4.4.2 git checkout -- file »Ö¸´¹¤×÷ÇøÎóÉ¾ÎÄ¼ş
+2.git commit -m ä¸€æ¬¡æäº¤æ·»åŠ çš„æ–‡ä»¶ä»¬åˆ°ä»“åº“
 
-5.Ô¶³Ì²Ö¿â
- 5.1 ±¾µØÌí¼ÓÔ¶³Ì¿â
-     git remote add origin Ô¶³Ì¿âµØÖ·£¬originÊÇÔ¶³Ì¿âÃû×Ö£¬Ä¬ÈÏorigin
-     git push -u origin master,-uÊÇ¹ØÁª±¾µØ·ÖÖ§ºÍÔ¶³Ì·ÖÖ§£¬ÔÙ´ÎpushÊ±-u¿ÉÊ¡ÂÔ
-     µÚÒ»´ÎÊ¹ÓÃµ½ÎÊÌâ£ºPlease make sure you have the correct access rightsand the repository exists »òPermission         denied (publickey).ÕâÊÇ±¾µØÃ»ÓĞÈ¨ÏŞÉÏ´«µ½githubÕË»§ÉÏ£¬ĞèÒªÅäÖÃssh£¬½«±¾µØµÄ¹«Ô¿·Åµ½GitHubµÄssh key ÀïÃæ¡£
- 5.2 ±¾µØ¿ËÂ¡Ô¶³Ì¿â
-     git clone Ô¶³Ì¿âµØÖ·
+3.ç‰ˆæœ¬ä¿®æ”¹
 
-6.·ÖÖ§¹ÜÀí
- 6.1 ´´½¨·ÖÖ§¡¢ºÏ²¢·ÖÖ§¡¢É¾³ı·ÖÖ§
-     ²é¿´·ÖÖ§£ºgit branch
-     ´´½¨·ÖÖ§£ºgit branch <name>
-     ÇĞ»»·ÖÖ§£ºgit checkout <name>
-     ´´½¨+ÇĞ»»·ÖÖ§£ºgit checkout -b <name>
-     ºÏ²¢Ä³·ÖÖ§µ½µ±Ç°·ÖÖ§£¨¿ìËÙºÏ²¢£©£ºgit merge <name>
-     É¾³ı·ÖÖ§£ºgit branch -d <name>
-     Ç¿ÖÆÉ¾³ı·ÖÖ§£¨É¾³ıºó²»¿É»Ö¸´£©£ºgit branch -D <name>
- 6.2 ³åÍ»½â¾ö
-     ³öÏÖ³åÍ»£¬ÊÖ¶¯ºÏ²¢£¬ÔÙÌá½»
- 6.3 ·ÖÖ§¹ÜÀí²ßÂÔ
-     git merge --no-ff -m <message> <branchname>,½ûÓÃ¿ìËÙºÏ²¢Ä£Ê½²¢Éú³ÉcommitĞÅÏ¢£¬¿ÉÔÚlogÖĞ¿´µ½mergeĞÅÏ¢
- 6.4 Bug·ÖÖ§
-     ´¢²ØÎ´Íê³ÉÈÎÎñÏÈ½â¾ömaster·ÖÖ§bug
-     git stash ´¢²ØÄ¿Ç°·ÖÖ§Î´Íê½á¹¤×÷½ø¶È
-     git stash list ²é¿´ËùÓĞ±£´æ¹¤×÷½ø¶È
-     git stash apply »Ö¸´²¢±£´æstashÄÚÈİ
-     git stash drop É¾³ıstashÄÚÈİ
-     git stash pop »Ö¸´²¢É¾³ıstashÄÚÈİ£¨³£ÓÃ£©
-     ÉÏÃæµÄÃüÁîÒ²¿ÉÒÔÔÙºóÃæ¼Óstash_idÀ´¶Ô¾ßÌåÄ³Ò»¸östash½øĞĞ²Ù×÷
-     git stash ÃüÁîºó£¬»áÒş²Øµ±Ç°½ø¶È¡£»á»Øµ½ÉÏ´ÎÌá½»µÄ×´Ì¬
- 6.5 ¶àÈËĞ­×÷
-     git fetch origin Ë¢ĞÂÔ¶³Ì¿â·ÖÖ§ĞÅÏ¢
-     git pull °Ñ×îĞÂµÄÌá½»´Óorigin/dev×¥È¡ÔÚ±¾µØºÏ²¢£¬½â¾ö³åÍ»£¬ÔÙÍÆËÍ
-     µÚÒ»´Îgit pullĞèÒª±¾µØ·ÖÖ§devÓëÔ¶³Ì·ÖÖ§dev½¨Á¢Á¬½Ó git branch --set-upstream-to=origin/dev dev
+	git status æŸ¥çœ‹ä»“åº“çŠ¶æ€
+	git diff æ–‡ä»¶å æŸ¥çœ‹å¯¹æ¯”
 
-7.±êÇ©¹ÜÀí
- 7.1 ´´½¨±êÇ©
-     git tag <tagname> ¸ø×î½üµÄÒ»´ÎÌá½»´òÉÏ±êÇ©
-     git tag ²é¿´ËùÓĞ±êÇ©
-     git log --pretty=oneline --abbrev-commit ²é¿´ÀúÊ·Ìá½»µÄcommit_id
-     git tag <tagname> <commit_id> ¸ø¶ÔÓ¦µÄcommit_id´òÉÏ±êÇ©
-     git show <tagname> ²é¿´±êÇ©ĞÅÏ¢
-     git tag -a <tagname> -m <message> <commit_id> ´´½¨´øÓĞËµÃ÷ĞÅÏ¢µÄ±êÇ©
-     git tag -d <tagname> É¾³ı±êÇ©
- 7.2 ²Ù×÷±êÇ©
-     git push origin <tagname> ÍÆËÍ¾ßÌå±êÇ©
-     git push origin tags ÍÆËÍËùÓĞÃ»ÓĞ±»ÍÆËÍ¹ıµÄ±êÇ©
-     git push origin :refs/tags/<tagname> É¾³ıÔ¶³Ì¿â±êÇ©
+4.æ—¶å…‰ç©¿æ¢­
 
-8.²¹³ä
-	git remote show Õ¹Ê¾Ô¶³Ì¿âµÄÃû×Ö
-	git show Õ¹Ê¾±¾µØ¿âĞÅÏ¢
-	git branch -m newname ½«±¾µØËùÓĞ·ÖÖ§¸³ÓèĞÂÃû×Ö
-	git branch -m oldname newname Ö¸¶¨ÒªÖØÃüÃû·ÖÖ§Ãû×Ö
-	git remote rm origin ÔÚ±¾µØ²Ö¿âÉ¾³ıÔ¶³Ì¿â
-	git remote add origin Ô¶³Ì¿âµØÖ· Ìí¼ÓÔ¶³Ì¿â
+ 4.1 ç‰ˆæœ¬å›é€€(ä¸Šä¸€ä¸ªç‰ˆæœ¬) git reset --hard HEAD^
+ 
+     git reset --hard commit_id å¯ä»¥å›åˆ°ä»»æ„ç‰ˆæœ¬ï¼ˆå¿«ç…§ï¼‰
+     git logï¼Œgit reflog å¯æŸ¥çœ‹commit_idæäº¤æ—¥å¿—
+     git log --graph --pretty=oneline --abbrev-commit æŸ¥çœ‹åˆ†æ”¯çš„æäº¤æƒ…å†µï¼ˆç®€ç•¥ç‰ˆï¼‰
+ 4.2 ç®¡ç†ä¿®æ”¹
+ 
+     cat æ–‡ä»¶å æŸ¥çœ‹æ–‡ä»¶å†…å®¹
+     git diff å·¥ä½œåŒºä¸stageæ¯”è¾ƒ
+     git diff --cached stageåŒºå’Œä»“åº“åˆ†æ”¯æ¯”è¾ƒ
+     git diff HEAD -- æ–‡ä»¶å å·¥ä½œåŒºå’Œä»“åº“åˆ†æ”¯æ¯”è¾ƒ
+ 4.3 æ’¤é”€ä¿®æ”¹
+ 
+     git checkout -- file ä¸¢å¼ƒå·¥ä½œåŒºä¿®æ”¹å†…å®¹
+     å…ˆ git reset HEAD <file>,ä¸¢æ‰æš‚å­˜åŒºä¿®æ”¹çš„å†…å®¹ï¼Œå†git checkout -- file ä¸¢æ‰å·¥ä½œåŒºä¿®æ”¹å†…å®¹
+     æäº¤åˆ°ç‰ˆæœ¬åº“æœªæäº¤åˆ°è¿œç¨‹åº“æƒ³æ’¤å›å‚è€ƒ4.1
+ 4.4 åˆ é™¤æ–‡ä»¶ä¸æ¢å¤ 
+ 
+     4.4.1 rm file åˆ é™¤å·¥ä½œåŒºçš„æ–‡ä»¶ git rm fileï¼ˆåˆ é™¤stageä¸­å†…å®¹ï¼‰æˆ–è€…git add fileï¼ˆå°†åˆ é™¤çš„è¡Œä¸ºæ·»åŠ åˆ°stageä¸­ï¼‰ï¼Œ
+	   ç„¶ågit commit
+     4.4.2 git checkout -- file æ¢å¤å·¥ä½œåŒºè¯¯åˆ æ–‡ä»¶
+
+5.è¿œç¨‹ä»“åº“
+
+ 5.1 æœ¬åœ°æ·»åŠ è¿œç¨‹åº“
+ 
+     git remote add origin è¿œç¨‹åº“åœ°å€ï¼Œoriginæ˜¯è¿œç¨‹åº“åå­—ï¼Œé»˜è®¤origin
+     git push -u origin master,-uæ˜¯å…³è”æœ¬åœ°åˆ†æ”¯å’Œè¿œç¨‹åˆ†æ”¯ï¼Œå†æ¬¡pushæ—¶-uå¯çœç•¥
+     ç¬¬ä¸€æ¬¡ä½¿ç”¨åˆ°é—®é¢˜ï¼šPlease make sure you have the correct access rightsand the repository exists æˆ–Permission         denied (publickey).è¿™æ˜¯æœ¬åœ°æ²¡æœ‰æƒé™ä¸Šä¼ åˆ°githubè´¦æˆ·ä¸Šï¼Œéœ€è¦é…ç½®sshï¼Œå°†æœ¬åœ°çš„å…¬é’¥æ”¾åˆ°GitHubçš„ssh key é‡Œé¢ã€‚
+ 5.2 æœ¬åœ°å…‹éš†è¿œç¨‹åº“
+ 
+     git clone è¿œç¨‹åº“åœ°å€
+
+6.åˆ†æ”¯ç®¡ç†
+
+ 6.1 åˆ›å»ºåˆ†æ”¯ã€åˆå¹¶åˆ†æ”¯ã€åˆ é™¤åˆ†æ”¯
+ 
+     æŸ¥çœ‹åˆ†æ”¯ï¼šgit branch
+     åˆ›å»ºåˆ†æ”¯ï¼šgit branch <name>
+     åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout <name>
+     åˆ›å»º+åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout -b <name>
+     åˆå¹¶æŸåˆ†æ”¯åˆ°å½“å‰åˆ†æ”¯ï¼ˆå¿«é€Ÿåˆå¹¶ï¼‰ï¼šgit merge <name>
+     åˆ é™¤åˆ†æ”¯ï¼šgit branch -d <name>
+     å¼ºåˆ¶åˆ é™¤åˆ†æ”¯ï¼ˆåˆ é™¤åä¸å¯æ¢å¤ï¼‰ï¼šgit branch -D <name>
+ 6.2 å†²çªè§£å†³
+ 
+     å‡ºç°å†²çªï¼Œæ‰‹åŠ¨åˆå¹¶ï¼Œå†æäº¤
+ 6.3 åˆ†æ”¯ç®¡ç†ç­–ç•¥
+ 
+     git merge --no-ff -m <message> <branchname>,ç¦ç”¨å¿«é€Ÿåˆå¹¶æ¨¡å¼å¹¶ç”Ÿæˆcommitä¿¡æ¯ï¼Œå¯åœ¨logä¸­çœ‹åˆ°mergeä¿¡æ¯
+ 6.4 Bugåˆ†æ”¯
+ 
+     å‚¨è—æœªå®Œæˆä»»åŠ¡å…ˆè§£å†³masteråˆ†æ”¯bug
+     git stash å‚¨è—ç›®å‰åˆ†æ”¯æœªå®Œç»“å·¥ä½œè¿›åº¦
+     git stash list æŸ¥çœ‹æ‰€æœ‰ä¿å­˜å·¥ä½œè¿›åº¦
+     git stash apply æ¢å¤å¹¶ä¿å­˜stashå†…å®¹
+     git stash drop åˆ é™¤stashå†…å®¹
+     git stash pop æ¢å¤å¹¶åˆ é™¤stashå†…å®¹ï¼ˆå¸¸ç”¨ï¼‰
+     ä¸Šé¢çš„å‘½ä»¤ä¹Ÿå¯ä»¥å†åé¢åŠ stash_idæ¥å¯¹å…·ä½“æŸä¸€ä¸ªstashè¿›è¡Œæ“ä½œ
+     git stash å‘½ä»¤åï¼Œä¼šéšè—å½“å‰è¿›åº¦ã€‚ä¼šå›åˆ°ä¸Šæ¬¡æäº¤çš„çŠ¶æ€
+ 6.5 å¤šäººåä½œ
+ 
+     git fetch origin åˆ·æ–°è¿œç¨‹åº“åˆ†æ”¯ä¿¡æ¯
+     git pull æŠŠæœ€æ–°çš„æäº¤ä»origin/devæŠ“å–åœ¨æœ¬åœ°åˆå¹¶ï¼Œè§£å†³å†²çªï¼Œå†æ¨é€
+     ç¬¬ä¸€æ¬¡git pulléœ€è¦æœ¬åœ°åˆ†æ”¯devä¸è¿œç¨‹åˆ†æ”¯devå»ºç«‹è¿æ¥ git branch --set-upstream-to=origin/dev dev
+
+7.æ ‡ç­¾ç®¡ç†
+
+ 7.1 åˆ›å»ºæ ‡ç­¾
+ 
+     git tag <tagname> ç»™æœ€è¿‘çš„ä¸€æ¬¡æäº¤æ‰“ä¸Šæ ‡ç­¾
+     git tag æŸ¥çœ‹æ‰€æœ‰æ ‡ç­¾
+     git log --pretty=oneline --abbrev-commit æŸ¥çœ‹å†å²æäº¤çš„commit_id
+     git tag <tagname> <commit_id> ç»™å¯¹åº”çš„commit_idæ‰“ä¸Šæ ‡ç­¾
+     git show <tagname> æŸ¥çœ‹æ ‡ç­¾ä¿¡æ¯
+     git tag -a <tagname> -m <message> <commit_id> åˆ›å»ºå¸¦æœ‰è¯´æ˜ä¿¡æ¯çš„æ ‡ç­¾
+     git tag -d <tagname> åˆ é™¤æ ‡ç­¾
+ 7.2 æ“ä½œæ ‡ç­¾
+ 
+     git push origin <tagname> æ¨é€å…·ä½“æ ‡ç­¾
+     git push origin tags æ¨é€æ‰€æœ‰æ²¡æœ‰è¢«æ¨é€è¿‡çš„æ ‡ç­¾
+     git push origin :refs/tags/<tagname> åˆ é™¤è¿œç¨‹åº“æ ‡ç­¾
+
+8.è¡¥å……
+
+	git remote show å±•ç¤ºè¿œç¨‹åº“çš„åå­—
+	git show å±•ç¤ºæœ¬åœ°åº“ä¿¡æ¯
+	git branch -m newname å°†æœ¬åœ°æ‰€æœ‰åˆ†æ”¯èµ‹äºˆæ–°åå­—
+	git branch -m oldname newname æŒ‡å®šè¦é‡å‘½ååˆ†æ”¯åå­—
+	git remote rm origin åœ¨æœ¬åœ°ä»“åº“åˆ é™¤è¿œç¨‹åº“
+	git remote add origin è¿œç¨‹åº“åœ°å€ æ·»åŠ è¿œç¨‹åº“
 
 
 
